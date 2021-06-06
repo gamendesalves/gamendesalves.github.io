@@ -126,8 +126,9 @@ body {
   color: #ffffff;
 }
 
-.social-icons ul {
+.social-icons li {
   display: inline;
+  padding: 0 18px;
 }
 
 @keyframes animation-photo-myself {
