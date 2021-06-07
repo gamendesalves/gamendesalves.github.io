@@ -17,8 +17,10 @@
         <div class="content">
           <section class="sidebar-left">
             <div class="sidebar-left-header">
-              <h1>Gabriel Beijamin Mendes Alves</h1>
-              <h4>Software Engineer</h4>
+              <h1 class="sidebar-left-header-title-name">
+                Gabriel Beijamin Mendes Alves
+              </h1>
+              <h4 class="sidebar-left-header-profession">Software Engineer</h4>
             </div>
             <div class="sidebar-left-content">
               <p><i class="fa fa-phone"></i>+55 41 996808471</p>
@@ -59,35 +61,83 @@
               <img
                 class="myself"
                 src="./images/myself.jpg"
-                alt="Photo from myself"
+                alt="Gabriel sitting on the chair smiling"
               />
             </div>
           </section>
         </div>
-        <h2 class="text-center">About Me</h2>
+
         <section>
-          <div class="personal-informations">
-            <p class="self-description">
-              Hello, I'm passionate about technologies and innovations, I have 4
-              years of experience in software development. During these years I
-              had the opportunity to work on several projects of value to the
-              institution and to simplify the use of technology in the lives of
-              thousands of people.
-            </p>
-            <div class="contacts">
-              <button id="downloadcv" class="btn" onclick="downloadCV()">
-                <i class="fa fa-download"></i>
-                Download CV
-              </button>
-              <button
-                class="btn"
-                onclick="window.open('https://api.whatsapp.com/send?phone=5541996808471')"
-              >
-                <i class="fa fa-whatsapp"></i>
-                Contact me
-              </button>
-            </div>
-          </div>
+          <nav class="nav-personal-informations text-center">
+            <ul>
+              <li>
+                <a href="#aboutme" class="list-personal-information-slider-item"
+                  >About Me</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#experience"
+                  class="list-personal-information-slider-item"
+                  >Experience</a
+                >
+              </li>
+              <li>
+                <a href="#hobbies" class="list-personal-information-slider-item"
+                  >Hobbies</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <ul>
+            <li id="aboutme" class="list-personal-information-item">
+              <div class="personal-information-about-me">
+                <h1 class="text-center">About Me</h1>
+                <p class="self-description">
+                  Hello, I'm passionate about technologies and innovations, I
+                  have 4 years of experience in software development. During
+                  these years I had the opportunity to work on several projects
+                  of value to the institution and to simplify the use of
+                  technology in the lives of thousands of people.
+                </p>
+                <div class="contacts">
+                  <button id="downloadcv" class="btn" onclick="downloadCV()">
+                    <i class="fa fa-download"></i>
+                    Download CV
+                  </button>
+                  <button
+                    class="btn"
+                    onclick="window.open('https://api.whatsapp.com/send?phone=5541996808471')"
+                  >
+                    <i class="fa fa-whatsapp"></i>
+                    Contact me
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <li id="experience" class="list-personal-information-item">
+              <div class="personal-information-about-me">
+                <h1 class="text-center">Experience</h1>
+                <p class="self-description">
+                  4 years of experience in software development.
+                </p>
+              </div>
+            </li>
+
+            <li id="hobbies" class="list-personal-information-item">
+              <div class="personal-information-about-me">
+                <h1 class="text-center">Hobbies</h1>
+                <p class="self-description">
+                  Hello, I'm passionate about technologies and innovations, I
+                  have 4 years of experience in software development. During
+                  these years I had the opportunity to work on several projects
+                  of value to the institution and to simplify the use of
+                  technology in the lives of thousands of people.
+                </p>
+              </div>
+            </li>
+          </ul>
         </section>
         <footer>
           <p class="copyright text-center">&copy; Copyright - 2021</p>

@@ -5,7 +5,6 @@ body {
 }
 
 .container {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -20,12 +19,12 @@ body {
   position: relative;
   border-radius: 1%;
   box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .sidebar-left {
-  height: 260px;
-  width: 600px;
+  height: 100%;
+  width: 62%;
   float: left;
   background-image: linear-gradient(
     to right top,
@@ -42,55 +41,21 @@ body {
 }
 
 .sidebar-left-header {
-  margin-top: 50px;
-  line-height: 10px;
+  margin-top: 2em;
+}
+
+.sidebar-left-header-title-name {
+  margin-bottom: 0.1em;
 }
 
 .sidebar-left-content {
-  margin-top: 30px;
+  margin-top: 1em;
 }
 
 .sidebar-right {
   float: right;
   margin: 0 auto;
   padding: 30px 70px 50px 50px;
-}
-
-.personal-informations {
-  background-color: #ffffff;
-  height: 180px;
-  width: 940px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 1%;
-}
-
-.self-description {
-  text-indent: 30px;
-  text-align: justify;
-  margin: 0 0 40px 0;
-}
-
-.contacts {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.btn {
-  background-color: #00bfff;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 16px;
-  transition: 1s all;
-}
-
-.btn:hover {
-  background-color: #1e90ff;
 }
 
 .myself {
@@ -128,7 +93,72 @@ body {
 
 .social-icons li {
   display: inline;
-  padding: 0 18px;
+  padding: 0 1em;
+}
+
+.nav-personal-informations li {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: #d4d4d4;
+  border-radius: 50%;
+  text-indent: -9999px;
+  margin-bottom: 10px;
+}
+
+.nav-personal-informations a {
+  display: block;
+}
+
+.nav-personal-informations li:hover {
+  background-color: #a5a5a5;
+}
+
+.list-personal-information-item {
+  display: none;
+  height: 250px;
+  width: 940px;
+  margin: auto;
+}
+
+.list-personal-information-item:target {
+  display: block;
+}
+
+.personal-information-about-me {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  padding: 10px 20px 20px 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1%;
+}
+
+.self-description {
+  text-indent: 30px;
+  text-align: justify;
+  margin: 0 0 40px 0;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  background-color: #00bfff;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: 1s all;
+}
+
+.btn:hover {
+  background-color: #1e90ff;
 }
 
 @keyframes animation-photo-myself {
@@ -156,5 +186,54 @@ body {
     opacity: 1;
     width: 200px;
     height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px), (max-width: 900px) {
+  .content {
+    width: 100%;
+    height: 40%;
+  }
+
+  .sidebar-left-header-title-name {
+    text-align: center;
+  }
+
+  .sidebar-left-header-profession {
+    text-align: center;
+  }
+
+  .sidebar-left-content p,
+  address {
+    display: none;
+  }
+
+  .sidebar-right {
+    width: 100%;
+    padding: 0px;
+    margin: 20px 0px;
+    text-align: center;
+  }
+
+  .myself {
+    width: 50%;
+    height: 30%;
+    animation: none;
+    transition: none;
+  }
+
+  .sidebar-left {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .list-personal-information-item {
+    width: 100%;
+    height: 20%;
+  }
+
+  .btn {
+    padding: 12px 5px;
+    margin: 0 20px;
   }
 }
